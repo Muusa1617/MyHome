@@ -1,9 +1,18 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils import timezone
 
-# 博客文章 model
+
 class Article(models.Model):
+    # 作者
+    author = models.ForeignKey(
+        User,
+        null=True,
+        on_delete=models.CASCADE,
+        related_name='articles',
+    )
     # 标题
+    # author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     # 正文
     body = models.TextField()
