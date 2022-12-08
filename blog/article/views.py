@@ -5,14 +5,14 @@ from rest_framework import generics,mixins
 from article.permissions import IsAdminUserOrReadOnly
 
 
-class ArticleList(generics.ListCreateAPIView,mixins.CreateModelMixin):
+class ArticleList(generics.ListCreateAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleListSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
 
-    # def perform_create(self, serializer):
-    #     serializer.save(author=self.request.uesr)
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
 
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
