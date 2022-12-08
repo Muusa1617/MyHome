@@ -10,7 +10,6 @@ class ArticleList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.uesr)
-    permission_classes = [IsAdminUserOrReadOnly]
 
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
