@@ -1,15 +1,18 @@
 
 from article.models import Article
-from article.serializers import ArticleListSerializer,ArticleDetailSerializer
-from rest_framework import generics
+from article.serializers import ArticleListSerializer, ArticleDetailSerializer
+from rest_framework import generics,mixins
 from article.permissions import IsAdminUserOrReadOnly
 
-class ArticleList(generics.ListCreateAPIView):
+
+class ArticleList(generics.ListCreateAPIView,mixins.CreateModelMixin):
     queryset = Article.objects.all()
     serializer_class = ArticleListSerializer
+    permission_classes = [IsAdminUserOrReadOnly]
 
-    def perform_create(self, serializer):
-        serializer.save(author=self.request.uesr)
+
+    # def perform_create(self, serializer):
+    #     serializer.save(author=self.request.uesr)
 
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
