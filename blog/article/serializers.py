@@ -67,6 +67,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class ArticleBaseSerializer(serializers.HyperlinkedModelSerializer):
     """博文序列化器基类"""
+    id = serializers.IntegerField(read_only=True)
     author = UserDescSerializer(read_only=True)
     # category 的嵌套序列化字段
     category = CategorySerializer(read_only=True)
