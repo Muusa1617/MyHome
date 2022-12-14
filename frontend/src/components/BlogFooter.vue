@@ -1,10 +1,9 @@
-<!--  frontend/src/components/BlogFooter.vue  -->
-
 <template>
-    <!--  br 标签给页脚留出位置  -->
-    <br><br><br>
+    <br>
+    <br>
+    <br>
     <div id="footer">
-        <p>Muusa.top</p>
+        <p>www.dusaiphoto.com</p>
     </div>
 </template>
 
