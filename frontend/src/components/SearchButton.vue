@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <form>
-            <input v-model="searchText" type="text" placeholder="输入搜索内容...">
+            <input v-model="searchText" type="text" placeholder="你在找什么...">
             <button v-on:click.prevent="searchArticles"></button>
         </form>
     </div>
@@ -77,14 +77,14 @@
         background: gray;
         /*background: #c5464a;*/
         border-radius: 0 5px 5px 0;
-        width: 45px;
+        width: 60px;
         top: 0;
         right: 0;
     }
 
     .search button:before {
-        content: "搜索";
-        font-size: 13px;
+        content: "Search";
+        font-size: 15px;
         color: white;
     }
 

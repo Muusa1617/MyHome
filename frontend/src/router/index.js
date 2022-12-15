@@ -5,6 +5,7 @@ import Login from "@/views/Login.vue";
 import UserCenter from "@/views/UserCenter.vue";
 import ArticleCreate from "@/views/ArticleCreate.vue";
 import ArticleEdit from "@/views/ArticleEdit.vue";
+import Index from "@/views/Index.vue";
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         path: "/article/edit/:id",
         name: "ArticleEdit",
         component: ArticleEdit
+    },
+    {
+        path: "/index",
+        name: "Index",
+        component: Index
     },
 ];
 

@@ -1,21 +1,58 @@
 <template>
 
-    <router-view/>
+
+    <div :style="backgroundDiv" class="bg">
+        <router-view />
+    </div>
+
+
 
 </template>
 
 <script>
-    export default {
-        name: 'App'
+export default {
+    name: 'App',
+    data() {
+
+        return {
+
+            backgroundDiv: {
+
+                backgroundImage: 'url(' + require('./images/网站背景图.jpg') + ')',
+
+                backgroundRepeat: 'no-repeat',
+                // width : 200,
+                // height : 300,
+                backgroundSize: '100% 100%',
+                // backgroundSize: '100%',
+      
+            }
+
+        }
+
     }
+
+
+}
 </script>
 
 <style>
-    #app {
-        font-family: Georgia, Arial, sans-serif;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
+#app {
+    font-family: "Gill Sans", sans-serif;
+    color:rgb(196, 212, 211);
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+}
+
+.bg {
+    z-index: -1;
+    position: absolute;
+    top: calc(0px + 0px);
+    left: 0;
+    width: 100%;
+    height: calc(100% - 0px);
+    transition: .25s;
+}
 </style>
 
 
