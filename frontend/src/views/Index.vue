@@ -1,30 +1,29 @@
 <template>
 
-    <!-- <div class="glass-container"> -->
     <BlogHeader />
-    <!-- </div> -->
-    <!-- <BlogHeader /> -->
     <div class="container">
         <div class="row">
             <div class="glass-container">
                 <div class="col-sm-4">
-                    <h3>第一列</h3>
+                    <h3>文章相关</h3>
                     <p>1</p>
                     <p>具体内容</p>
                 </div>
             </div>
-            <tr></tr>
+            <br>
+            <br>
+            <br>
             <div class="glass-container">
                 <div class="col-sm-4">
-                    <h3>第二列</h3>
+                    <h3>工具相关</h3>
                     <p>2..</p>
                     <p>具体内容</p>
                 </div>
             </div>
-
+            <br>
             <div class="glass-container">
                 <div class="col-sm-4">
-                    <h3>第三列</h3>
+                    <h3>外链相关</h3>
                     <p>3..</p>
                     <p>具体内容</p>
                 </div>

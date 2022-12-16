@@ -1,7 +1,5 @@
 <template>
-    <br>
-    <br>
-    <br>
+
     <div id="footer">
         <p>www.muusa777.com</p>
     </div>
@@ -15,7 +13,7 @@
 
 <style scoped>
     #footer {
-        /* position: fixed; */
+        position: fixed;
         left: 0;
         bottom: 0;
         height: 50px;
